@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400Italic,700");
+:root {
+  --bg-color: f4f4f4;
+  --main-color: #3a4145;
+  --secondary-color: #aaaaaa;
+}
+
+html {
+  font-size: 20px;
+  box-sizing: border-box;
+  padding: 0 1rem 0 1rem;
+  max-width: 900px;
+  margin: 1rem auto;
+}
+
+body {
+  font-family: Lato;
+  font-size: 1rem;
+  line-height: 1.5em;
+  color: var(--main-color);
+  margin: 0;
+  background-color: var(--bg-color);
+}
+
+blockquote {
+  margin: 1.6em 0 1.6em 0;
+  padding: 0 0 0 1.6em;
+  border-left: var(--main-color) 0.4em solid;
+  font-style: italic;
+  /*   background-color: lightblue; */
+}
+
+blockquote small {
+  display: inline-block;
+  margin: 0.8em 0 0 0;
+  font-size: 0.9em;
+  color: var(--secondary-color);
+  font-style: normal;
+}
+
+blockquote small:before {
+  content: "\2014 \00A0";
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 2;
+  text-align: center;
+}

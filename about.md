@@ -1,3 +1,8 @@
+---
+layout: default-layout.njk
+title: About
+---
+
 # About
 
 Value type: contains their data 
