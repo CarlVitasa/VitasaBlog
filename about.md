@@ -9,6 +9,7 @@ Value type: contains their data
 - e.g. `int`, `float`, `bool`, `enum`, `struct`
 - cannot be null 
 - each assignment makes a copy of the variable
+
 ```csharp
 using System;
 
