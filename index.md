@@ -3,7 +3,10 @@ layout: default-layout.njk
 title: Carl Vitasa's Blog
 ---
 
-<!-- # Home is Where the Heart is -->
+<!-- TODO: home and about centering is off due to iframe and blockquote -->
+
+
+# Home is Where the Heart is
 
 <div class="iframe-container">
 <iframe style="width: 350px; height: 200px; scrolling="no"; src="https://editor.p5js.org/CarlVitasa/embed/oG7PAiEe3"></iframe>
