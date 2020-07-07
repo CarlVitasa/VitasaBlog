@@ -1,10 +1,16 @@
 ---
 layout: default-layout.njk
-title: Blog
+pagination:
+  data: collections.post
+  size: 10
+  reverse: true
+  alias: posts
 ---
-
-<div class="shadertoy-container">
-<iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/WlsSDS?gui=false&t=10&paused=false&muted=true" allowfullscreen></iframe>
-</div>
-
-test 
+{% for post in posts %}
+  <article>
+    <h3>
+      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+    </h3>
+    {{ post.date }}
+  </article>
+{% endfor %}

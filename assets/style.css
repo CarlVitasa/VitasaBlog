@@ -22,7 +22,7 @@ html {
   html {
     font-size: 16px;
   }
-} 
+}
 
 .p5js-container {
   text-align: center;
@@ -47,10 +47,13 @@ body {
   margin: 0;
   background-color: var(--bg-color);
 }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: Roboto, Arial, sans-serif;
   color: var(--secondary-color);
-  }
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
 h1 {
   /* font-family: Philosopher, Arial, sans-serif; */
@@ -99,14 +102,7 @@ tr:nth-child(odd) {
   background-color: #f2f2f2;
 }
 
-dl{
-  font-weight: bold;
-}
-
-dd{
-  font-weight: normal;
-}
-
+/* Links */
 a:link {
   color: var(--secondary-color);
   text-decoration: none;
@@ -202,7 +198,7 @@ blockquote small:before {
 /* width */
 ::-webkit-scrollbar {
   width: 14px;
-  height: 14px;
+  height: 10px;
 }
 
 /* Track */
@@ -212,11 +208,10 @@ blockquote small:before {
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--secondary-color);
-  filter: brightness(85%); 
+  background: #B4D4F4; 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #B4D4F4; 
+  background: var(--secondary-color);
 }
