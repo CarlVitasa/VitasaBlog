@@ -1,10 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:400,400Italic,700|Quando:400");
+@import url("https://fonts.googleapis.com/css?family=Philosopher:400,400Italic,700|Roboto:400, 700");
 :root {
   --bg-color: f4f4f4;
   --primary-color: #2E3440;
   --secondary-color:  #81A1C1;
   --ternary-color: #A3BE8C;
   --misc-color: #aaaaaa;
+  --radius: 0.5em;
 }
 ::selection {
   color: white;
@@ -14,29 +15,51 @@
 html {
   margin: 1rem auto;
   font-size: 18px;
-  box-sizing: content-box;
+  box-sizing: border-box;
   padding: 0 1rem 0 1rem;
-  /* min-width: 400px; */
   max-width: 900px;
+  overflow-y: scroll;
 }
 
-.iframe-container {
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 16px;
+  }
+} 
+
+.p5js-container {
+  text-align: center;
+}
+
+.shadertoy-container {
+  pointer-events: none;
   text-align: center;
 }
 
 iframe {
   border: none;
-  border-radius: 1.0em;
+  border-radius: var(--radius);
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0);
 }
 
 body {
-  font-family: Lato;
+  font-family: Roboto;
   font-size: 1rem;
   line-height: 1.5em;
   color: var(--primary-color);
   margin: 0;
   background-color: var(--bg-color);
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-family: Philosopher;
+color: var(--secondary-color);
 }
 
 code {
@@ -45,7 +68,7 @@ code {
   color: #f8f8f2;
   background-color: var(--primary-color);
   padding: 1px 6px;
-  border-radius: 0.3em;
+  border-radius: var(--radius);
   width:600px; 
     overflow-x:scroll; 
 }
@@ -58,25 +81,13 @@ dd{
   font-weight: normal;
 }
 
-h1 {
-    /* font-family: Quando; */
-    font-size: 2rem;
-    line-height: 1;
-    text-align: center;
-    /* color: var(--secondary-color); */
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: var(--secondary-color);
-}
-
 a:link {
-  color: var(--ternary-color);
+  color: var(--secondary-color);
   text-decoration: none;
 }
 
 a:visited {
-  color: var(--ternary-color);
+  color: var(--secondary-color);
   text-decoration: none;
 }
 
@@ -98,7 +109,7 @@ img{
 blockquote {
   margin: 1.6em 0 1.6em 0;
   padding: 0 0 0 1.6em;
-  border-left: var(--ternary-color) 0.4em solid;
+  border-left: var(--secondary-color) 0.4em solid;
   font-style: italic;
 }
 
@@ -115,7 +126,6 @@ blockquote small:before {
 }
 
 .navbar {
-  /* font-family: Quando; */
   font-size: 16px;
   text-align: center;
 }
@@ -124,7 +134,6 @@ blockquote small:before {
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--ternary-color);
   padding: 15px 0px;
   margin: 10px 20px;
   display: inline-block;
