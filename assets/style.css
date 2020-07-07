@@ -1,15 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Philosopher:400,400Italic,700|Roboto:400, 700");
 :root {
-  --bg-color: f4f4f4;
+  --bg-color: #ffffff;
   --primary-color: #2E3440;
   --secondary-color:  #81A1C1;
   --ternary-color: #A3BE8C;
   --misc-color: #aaaaaa;
   --radius: 0.5em;
-}
-::selection {
-  color: white;
-  background-color: var(--primary-color);
+  --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0);
 }
 
 html {
@@ -39,38 +36,67 @@ html {
 iframe {
   border: none;
   border-radius: var(--radius);
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0);
+	box-shadow: var(--shadow);
 }
 
 body {
-  font-family: Roboto;
+  font-family: Roboto, Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.5em;
   color: var(--primary-color);
   margin: 0;
   background-color: var(--bg-color);
 }
+h1, h2, h3, h4, h5, h6 {
+  font-family: Roboto, Arial, sans-serif;
+  color: var(--secondary-color);
+  }
 
 h1 {
+  /* font-family: Philosopher, Arial, sans-serif; */
   font-size: 2rem;
   line-height: 1;
   text-align: center;
 }
 
-h1, h2, h3, h4, h5, h6 {
-font-family: Philosopher;
-color: var(--secondary-color);
-}
-
-code {
+p code {
   font-family: Consolas,"courier new";
   font-size: 16px;
   color: #f8f8f2;
   background-color: var(--primary-color);
-  padding: 1px 6px;
-  border-radius: var(--radius);
+  padding: 2px 6px;
+  border-radius: 0.3em;
   width:600px; 
-    overflow-x:scroll; 
+  overflow-x:scroll; 
+}
+
+hr {
+  border: 0;
+  height: 0;
+  margin: 25px 0;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+
+/*TODO: blue header*/
+table {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+	box-shadow: var(--shadow);
+}
+
+th {
+  padding: 10px;
+  color: var(--bg-color);
+  background-color: var(--secondary-color);
+}
+td {
+  padding: 10px;
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
 }
 
 dl{
@@ -94,22 +120,23 @@ a:visited {
 a:hover {
   text-decoration: underline;
 }
-
-/* TODO: scale image down only based on width of screen */
+/* Images ----------------------------------------------------------- */
 img{
-  /* width: 100%;
-  height: auto; */
-  max-width:900px;
-  object-fit: contain;
-  /* margin: 1rem auto;
-  box-sizing: content-box;
-  padding: 0 1rem 0 1rem;  */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
 }
 
+/* Block Quote ----------------------------------------------------------- */
 blockquote {
   margin: 1.6em 0 1.6em 0;
   padding: 0 0 0 1.6em;
   border-left: var(--secondary-color) 0.4em solid;
+  color: var(--secondary-color);
   font-style: italic;
 }
 
@@ -117,7 +144,6 @@ blockquote small {
   display: inline-block;
   margin: 0.8em 0 0 0;
   font-size: 0.9em;
-  color: var(--misc-color);
   font-style: normal;
 }
 
@@ -125,6 +151,7 @@ blockquote small:before {
   content: "\2014 \00A0";
 }
 
+/* Navbar ----------------------------------------------------------- */
 .navbar {
   font-size: 16px;
   text-align: center;
@@ -163,4 +190,33 @@ blockquote small:before {
 .nav-link-fade-up:hover::before {
   bottom: 10px;
   opacity: 1;
+}
+
+/* Misc ----------------------------------------------------------- */
+::selection {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+/* Custom Scroll Bar */
+/* width */
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  filter: brightness(85%); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #B4D4F4; 
 }
