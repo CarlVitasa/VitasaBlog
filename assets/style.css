@@ -55,12 +55,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 10px;
 }
 
-h1 {
-  /* font-family: Philosopher, Arial, sans-serif; */
-  font-size: 2rem;
-  line-height: 1;
-  text-align: center;
-}
+
 
 p code {
   font-family: Consolas,"courier new";
@@ -84,9 +79,8 @@ hr {
 /*TODO: blue header*/
 table {
   border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
-	box-shadow: var(--shadow);
+  margin: 20px auto;
+  box-shadow: var(--shadow);
 }
 
 th {

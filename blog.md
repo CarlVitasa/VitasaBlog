@@ -6,11 +6,12 @@ pagination:
   reverse: true
   alias: posts
 ---
+
 {% for post in posts %}
   <article>
     <h3>
       <a href="{{ post.url | url }}">{{ post.data.title }}</a>
     </h3>
-    {{ post.date }}
+      <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
   </article>
 {% endfor %}
