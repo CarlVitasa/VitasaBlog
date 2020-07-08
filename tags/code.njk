@@ -1,18 +1,7 @@
 ---
 eleventyExcludeFromCollections: true
 layout: default-layout.njk
-pagination:
-  data: collections.code
-  size: 1000
 ---
 
+{% set currentCollection = collections.code %}
 {% include "tags-list.njk" %}
-{% for code in collections.code | reverse %}
-  <article>
-    <time datetime="{{ post.date | dateIso }}">{{ code.date | dateReadable }}</time> <a href="{{ code.url | url }}"> {{ code.data.title }}</a>
-      {% for tag in code.data.tags %}
-        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-        <a href="{{ tagUrl | url }}" class="tag">#{{ tag }}</a>
-    {% endfor %}
-  </article>
-{% endfor %}
