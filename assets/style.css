@@ -7,6 +7,9 @@
   --misc-color: #aaaaaa;
   --radius: 0.5em;
   --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0);
+
+  --primary-font: Roboto, Arial, sans-serif;
+  --secondary-font: Consolas,"courier new";
 }
 
 html {
@@ -40,7 +43,7 @@ iframe {
 }
 
 body {
-  font-family: Roboto, Arial, sans-serif;
+  font-family: var(--primary-font);
   font-size: 1rem;
   line-height: 1.5em;
   color: var(--primary-color);
@@ -49,7 +52,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Roboto, Arial, sans-serif;
+  font-family: var(--primary-font);
   color: var(--secondary-color);
   margin-top: 10px;
   margin-bottom: 10px;
@@ -58,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 p code {
-  font-family: Consolas,"courier new";
+  font-family: var(--secondary-font);
   font-size: 16px;
   color: #f8f8f2;
   background-color: var(--primary-color);
@@ -212,7 +215,7 @@ blockquote small:before {
 
 time {
   font-size: 0.8em;
-  font-family: Consolas;
+  font-family: var(--secondary-font);
   color: var(--bg-color);
   background: var(--secondary-color);
   border-radius: var(--radius);
