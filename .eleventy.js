@@ -12,6 +12,6 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig.addFilter('dateReadable', date => {
-        return moment(date).utc().format('LL'); // E.g. May 31, 2019
+        return moment(date).utc().format('YYYY MMM DD').toUpperCase(); // e.g. 2020 JUL 07
     });
 }

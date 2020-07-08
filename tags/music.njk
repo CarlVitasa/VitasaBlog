@@ -1,0 +1,18 @@
+---
+eleventyExcludeFromCollections: true
+layout: default-layout.njk
+pagination:
+  data: collections.music
+  size: 1000
+---
+
+{% include "tags-list.njk" %}
+{% for music in collections.music | reverse %}
+  <article>
+    <time datetime="{{ post.date | dateIso }}">{{ music.date | dateReadable }}</time> <a href="{{ music.url | url }}"> {{ music.data.title }}</a>
+      {% for tag in music.data.tags %}
+        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+        <a href="{{ tagUrl | url }}" class="tag">#{{ tag }}</a>
+    {% endfor %}
+  </article>
+{% endfor %}

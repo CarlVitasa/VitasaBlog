@@ -209,3 +209,20 @@ blockquote small:before {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--secondary-color);
 }
+
+time {
+  font-size: 0.8em;
+  font-family: Consolas;
+  color: var(--bg-color);
+  background: var(--secondary-color);
+  border-radius: var(--radius);
+  padding: 2px 6px;
+}
+
+a[href].tag,
+.tag {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: var(--ternary-color);
+}

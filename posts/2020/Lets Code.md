@@ -1,7 +1,8 @@
 ---
 layout: post-layout.njk
-title: Blog Post 1
-tags: ['post']
+title: Lets Code
+tags: 
+    - code
 date: 2020-07-07
 ---
 
