@@ -37,6 +37,8 @@ html {
 }
 
 iframe {
+  max-width: 100%;
+  
   border: none;
   border-radius: var(--radius);
 	box-shadow: var(--shadow);
