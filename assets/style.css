@@ -9,7 +9,7 @@
   --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0);
 
   --primary-font: Roboto, Arial, sans-serif;
-  --secondary-font: Consolas,"courier new";
+  --secondary-font: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
 html {
@@ -38,7 +38,6 @@ html {
 
 iframe {
   max-width: 100%;
-  
   border: none;
   border-radius: var(--radius);
 	box-shadow: var(--shadow);
