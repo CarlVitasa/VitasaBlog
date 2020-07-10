@@ -4,6 +4,7 @@ A static site made with [11ty](https://www.11ty.dev/) and hosted on [Netlify](ht
 ## To Do
 - ~~Figure out a plan for scaling p5js sketches (currently using iframe).~~
 - Add zoom to scale images?
+- Switch Navbar to bottom on mobile
 - Think of a way to incorporate GLSL Shaders, maybe not through shadertoy embeds. 
 - Actually post stuff.
 - Buy a domain.
