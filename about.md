@@ -4,8 +4,9 @@ layout: default-layout.njk
 title: About
 ---
 
-<div class="shadertoy-container">
-<iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/WlsSDS?gui=false&t=10&paused=false&muted=true" allowfullscreen></iframe>
+  
+<div style="max-width: 640px; height: 360px;" class="corner-wrapper">
+<iframe width="640px" height="360px" frameborder="0" src="https://www.shadertoy.com/embed/WlsSDS?gui=false&t=10&paused=false&muted=true"></iframe>
 </div>
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.

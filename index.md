@@ -4,17 +4,12 @@ layout: default-layout.njk
 title: Carl Vitasa's Blog
 ---
 
-
+<div style="max-width: 868px; height: 200px;" class="corner-wrapper">
+<iframe width="868px" height="200px" frameborder="0" src="https://editor.p5js.org/embed/oG7PAiEe3"></iframe>
+</div>
 
 > Adapt what is useful, reject what is useless, and add what is specifically your own.
 > <br> <small>Bruce Lee</small>
-
-<div class="p5js-container">
-<iframe style="width: 868px; height: 200px; scrolling="no"; src="https://editor.p5js.org/CarlVitasa/embed/oG7PAiEe3"></iframe>
-</div>
-
-<iframe style="width: 640px; height: 360px; overflow: hidden;"  scrolling="no" frameborder="0" src="https://editor.p5js.org/embed/B1j5yC2vQ"></iframe>
-
 
 ---
 
