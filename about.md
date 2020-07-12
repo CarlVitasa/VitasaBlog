@@ -1,12 +1,12 @@
 ---
 eleventyExcludeFromCollections: true
-layout: default-layout.njk
+layout: layouts/default-layout.njk
 title: About
 ---
 
   
 <div style="max-width: 640px; height: 360px;" class="corner-wrapper">
-<iframe width="640px" height="360px" frameborder="0" src="https://www.shadertoy.com/embed/WlsSDS?gui=false&t=10&paused=false&muted=true"></iframe>
+  <iframe width="640px" height="360px" frameborder="0" src="https://www.shadertoy.com/embed/WlsSDS?gui=false&t=10&paused=false&muted=true"></iframe>
 </div>
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.

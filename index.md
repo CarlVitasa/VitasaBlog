@@ -1,6 +1,6 @@
 ---
 eleventyExcludeFromCollections: true
-layout: default-layout.njk
+layout: layouts/default-layout.njk
 title: Carl Vitasa's Blog
 ---
 
