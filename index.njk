@@ -1,0 +1,141 @@
+---
+eleventyExcludeFromCollections: true
+layout: layouts/default-layout.njk
+title: Carl Vitasa's Blog
+---
+
+{% include "shaders/dots.njk" %}
+
+{% markdown %}
+> Adapt what is useful, reject what is useless, and add what is specifically your own.
+> <br><small>Bruce Lee</small>
+
+Testing My really *important* content.
+
+{% endmarkdown %}
+
+{% highlight "js" %}
+// Javascript code with syntax highlighting.
+var fun = function lang(l) {
+  dateformat.i18n = require('./lang/' + l)
+  return true;
+}
+{% endhighlight %}
+
+{% markdown %}
+Text can be **bold**, _italic_, or ~~strikethrough~~.
+
+[Link to another page](/).
+
+<!-- <input type="checkbox" onclick="return false" checked="checked"/> -->
+
+There should be whitespace between paragraphs.
+
+There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+
+# Header 1
+
+This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+
+## Header 2
+
+> This is a blockquote following a header.
+>
+> When something is important enough, you do it even if the odds are not in your favor.
+
+### Header 3
+
+```js
+// Javascript code with syntax highlighting.
+var fun = function lang(l) {
+  dateformat.i18n = require('./lang/' + l)
+  return true;
+}
+```
+
+```ruby
+# Ruby code with syntax highlighting
+GitHubPages::Dependencies.gems.each do |gem, version|
+  s.add_dependency(gem, "= #{version}")
+end
+```
+
+#### Header 4
+
+*   This is an unordered list following a header.
+*   This is an unordered list following a header.
+*   This is an unordered list following a header.
+
+##### Header 5
+
+1.  This is an ordered list following a header.
+2.  This is an ordered list following a header.
+3.  This is an ordered list following a header.
+
+###### Header 6
+
+### Here is a table
+
+| head1        | head two          | three |
+| :----------- | :---------------- | :---- |
+| ok           | good swedish fish | nice  |
+| out of stock | good and plenty   | nice  |
+| ok           | good `oreos`      | hmm   |
+| ok           | good `zoute` drop | yumm  |
+
+### There's a horizontal rule below this.
+
+---
+
+### Here is an unordered list:
+
+-   Item foo
+-   Item bar
+-   Item baz
+-   Item zip
+
+### And an ordered list:
+
+1.  Item one
+1.  Item two
+1.  Item three
+1.  Item four
+
+### And a nested list:
+
+- level 1 item
+  - level 2 item
+  - level 2 item
+    - level 3 item
+    - level 3 item
+- level 1 item
+  - level 2 item
+  - level 2 item
+  - level 2 item
+- level 1 item
+  - level 2 item
+  - level 2 item
+- level 1 item
+
+### Small image
+
+![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
+
+### Large image
+
+![Branching](https://guides.github.com/activities/hello-world/branching.png)
+
+
+```text
+Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this. 
+```
+
+```text
+The final element.
+```
+
+{% endmarkdown %}
+
+{# <div style="max-width: 868px; height: 200px;" class="corner-wrapper">
+<iframe width="868px" height="200px" frameborder="0" src="https://editor.p5js.org/embed/oG7PAiEe3"></iframe>
+</div> #}
