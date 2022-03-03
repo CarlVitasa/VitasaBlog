@@ -4,7 +4,13 @@ layout: layouts/default-layout.njk
 title: Carl Vitasa's Blog
 ---
 
-{% include "shaders/dots.njk" %}
+{% markdown %}
+# Sketches
+{% endmarkdown %}
+
+<div style="max-width: 868px; height: 242px;" class="corner-wrapper">
+<iframe width="868px" height="250px" frameborder="0" src="https://editor.p5js.org/CarlVitasa/full/oG7PAiEe3"></iframe>
+</div> 
 
 {% markdown %}
 > Adapt what is useful, reject what is useless, and add what is specifically your own.
@@ -40,7 +46,6 @@ This is a normal paragraph following a header. GitHub is a code hosting platform
 ## Header 2
 
 > This is a blockquote following a header.
->
 > When something is important enough, you do it even if the odds are not in your favor.
 
 ### Header 3
@@ -112,16 +117,7 @@ This is a normal paragraph following a header. GitHub is a code hosting platform
 
 
 ```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long.
- This line should be long enough to demonstrate this. 
-```
-
-```
 The final element.
 ```
 
 {% endmarkdown %}
-
-{# <div style="max-width: 868px; height: 200px;" class="corner-wrapper">
-<iframe width="868px" height="200px" frameborder="0" src="https://editor.p5js.org/embed/oG7PAiEe3"></iframe>
-</div> #}

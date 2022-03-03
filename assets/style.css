@@ -1,16 +1,18 @@
-@import url("https://fonts.googleapis.com/css?family=Philosopher:400,400Italic,700|Roboto:400, 700|");
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap');
 
 :root {
-  --bg-color: #ffffff;
+  --bg-color: #F6F7F8;
   --primary-color: #2E3440;
-  /* --secondary-color:  #81A1C1;
-  --ternary-color: #A3BE8C; */
-  --secondary-color: #2E3440;
-  --ternary-color: #2E3440;
+  /* --secondary-color: #2E3440; */
+  --secondary-color: #77AD78;
+  --ternary-color: #ebebeb;
   --misc-color: #aaaaaa;
   --radius: 0.5em;
   --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0);
 
+  --header-font: 'Baloo 2', sans-serif;
   --primary-font: Roboto, Arial, sans-serif;
   --secondary-font: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
@@ -51,16 +53,24 @@ body {
   font-family: var(--primary-font);
   font-size: 1rem;
   line-height: 1.5em;
-  color: var(--primary-color);
   margin: 0;
   background-color: var(--bg-color);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--primary-font);
-  color: var(--secondary-color);
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+h1 {
+  font-family: var(--header-font);
+  font-size: 2.5em;
+  color: var(--primary-color);
+  text-align: center;
+  margin: 2.5rem 0 1.5rem 0;
+  line-height: 1.25;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: var(--header-font);
+  color: var(--primary-color);
+  margin: 2.5rem 0 1.5rem 0;
+  line-height: 1.25;
 }
 
 code {
@@ -78,7 +88,8 @@ hr {
   border: 0;
   height: 0;
   margin: 1em 0;
-  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  border-top: 2px solid var(--primary-color);
+  opacity: 0.2;
 }
 
 
@@ -94,7 +105,7 @@ table {
 th {
   padding: 0.75em;
   color: var(--bg-color);
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
 
 td {
@@ -102,12 +113,14 @@ td {
 }
 
 tr:nth-child(odd) {
-  background-color: #f2f2f2;
+  background-color: var(--ternary-color);
 }
 
 /* Links */
-a:link {
-  color: var(--secondary-color);
+
+a:link:not(.nav-link) {
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.35s;
   text-decoration: none;
 }
 
@@ -116,8 +129,8 @@ a:visited {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+a:link:hover {
+  border-bottom-color: var(--secondary-color);
 }
 
 /* Images ----------------------------------------------------------- */
@@ -136,8 +149,7 @@ blockquote {
   margin: 1.6em 0 1.6em 0;
   padding: 0 0 0 1.6em;
   border-left: var(--secondary-color) 0.4em solid;
-  color: var(--secondary-color);
-  font-style: italic;
+  color: var(--primary-color);
 }
 
 blockquote small {
@@ -152,57 +164,42 @@ blockquote small:before {
 }
 
 /* Navbar ----------------------------------------------------------- */
-.logo {
-  float: left;
-  text-align: left;
-  margin-left: 1em;
-  padding: 1em;
-}
 
 .navbar {
   font-size: 16px;
-  text-align: right;
+  text-align: center;
 }
 
 .nav-link {
+  font-family: var(--header-font);
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 0px;
-  margin: 10px 20px;
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
   display: inline-block;
   position: relative;
   opacity: 0.75;
-}
-
-.nav-link:hover {
-  opacity: 1;
+  background: linear-gradient(to bottom, var(--secondary-color) 0%, var(--secondary-color) 100%);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 3px 3px;
   text-decoration: none;
 }
 
-.nav-link::before {
-  transition: 300ms;
-  height: 5px;
-  content: "";
-  position: absolute;
-  background-color: var(--secondary-color);
-}
-
-.nav-link-fade-up::before {
-  width: 100%;
-  bottom: 1px;
-  opacity: 0;
-}
-
-.nav-link-fade-up:hover::before {
-  bottom: 10px;
-  opacity: 1;
+.nav-link:hover {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%2377AD78' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: 0 100%;
+  background-size: auto 6px;
+  background-repeat: repeat-x;
+  text-decoration: none;
 }
 
 /* Misc ----------------------------------------------------------- */
 ::selection {
   color: white;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 
 /* Custom Scroll Bar */
@@ -231,15 +228,81 @@ time {
   font-size: 0.8em;
   font-family: var(--secondary-font);
   color: var(--bg-color);
-  background: var(--secondary-color);
+  background: var(--primary-color);
   border-radius: var(--radius);
   padding: 2px 6px;
 }
 
-a[href].tag,
-.tag {
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 0.8em;
-  color: var(--ternary-color);
+/* Profile image */
+
+.profile {
+  width: 128px;
+  box-shadow: none !important;
+}
+
+.profile:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+
+/* highlight */
+
+mark {
+  margin: 0 -0.4em;
+  padding: 0.1em 0.4em;
+  border-radius: 0.8em 0.3em;
+  background: transparent;
+  background-image: linear-gradient(to right,
+      rgba(255, 225, 0, 0.1),
+      rgba(255, 225, 0, 0.7) 4%,
+      rgba(255, 225, 0, 0.3));
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }

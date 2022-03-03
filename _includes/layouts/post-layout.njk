@@ -4,6 +4,5 @@ layout: layouts/default-layout.njk
 
 <article>
   <h1 style="margin-bottom: 0em;">{{ title }}</h1>
-  <time datetime="{{ date | dateIso }}">{{ date | dateReadable }}</time>
   {{ content | safe }}
 </article>

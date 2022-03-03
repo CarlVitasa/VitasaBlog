@@ -3,11 +3,9 @@ eleventyExcludeFromCollections: true
 layout: layouts/default-layout.njk
 title: About
 ---
+# About
 
-  
-<div style="max-width: 640px; height: 360px;" class="corner-wrapper">
-  <iframe width="640px" height="360px" frameborder="0" src="https://www.shadertoy.com/embed/WlsSDS?gui=false&t=10&paused=false&muted=true"></iframe>
-</div>
+Here you'll find <mark> all my notes, but it's mostly for fun.</mark>
 
 <div style="max-width: 640px; height: 360px;" class="corner-wrapper">
     <script src="https://unpkg.com/shader-doodle@alpha"></script>

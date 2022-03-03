@@ -1,26 +1,10 @@
-<a href="/blog" class="tag">#All</a>
-<a href="/tags/code" class="tag">#Code</a>
-<a href="/tags/music" class="tag">#Music</a>
-<a href="/tags/math" class="tag">#Math</a>
+{% markdown %}
+# Articles
+{% endmarkdown %}
 
 {% for post in currentCollection | reverse %}
   <article>
-    <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
     <a href="{{ post.url | url }}">
       {{ post.data.title }}</a>
-    {% for tag in post.data.tags %}
-      {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-      <a href="{{ tagUrl | url }}" class="tag">#{{ tag }}</a>
-    {% endfor %}
   </article>
 {% endfor %}
-
-{# <nav>
-{% if pagination.href.previous %}
-    <span style="float:left;"><a href="{{ pagination.href.previous }}">previous</a></span>
-{% endif %}
-
-{% if pagination.href.next %}
-    <span style="float:right;"><a href="{{ pagination.href.next }}"> next</a><span>
-{% endif %}
-</nav> #}
