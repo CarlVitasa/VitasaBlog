@@ -20,7 +20,7 @@
   "homepage": "https://github.com/CarlVitasa/TestBlog#readme",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.2.2",
     "moment": "^2.27.0"
   }
 }

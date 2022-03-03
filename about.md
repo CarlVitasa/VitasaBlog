@@ -141,7 +141,7 @@ end
 
 ### Large image
 
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
+![Branching](https://docs.github.com/assets/cb-23923/images/help/repository/branching.png)
 
 
 ```text
@@ -150,4 +150,8 @@ Long, single-line code blocks should not wrap. They should horizontally scroll i
 
 ```text
 The final element.
+```
+
+```js
+var x = 24;
 ```
