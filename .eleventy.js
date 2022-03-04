@@ -5,8 +5,10 @@ moment.locale('en');
 const markdownIt = require("markdown-it");
 
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addPassthroughCopy('./assets');
-    eleventyConfig.addWatchTarget('./assets');
+    eleventyConfig.addPassthroughCopy('./src/assets');
+
+    eleventyConfig.addWatchTarget('./src/assets');
+
     eleventyConfig.addPlugin(syntaxHighlight);
 
     eleventyConfig.addFilter('dateIso', date => {
@@ -16,9 +18,11 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter('dateReadable', date => {
         return moment(date).utc().format('YYYY MMM DD').toUpperCase(); // e.g. 2020 JUL 07
     });
+
     eleventyConfig.addPairedShortcode("myShortcode", function (content) {
         return content;
     });
+
     const md = new markdownIt({
         html: true
     });
@@ -26,4 +30,11 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPairedShortcode("markdown", (content) => {
         return md.render(content);
     });
+
+    return {
+        dir: {
+            input: "src",
+            output: "dist",
+        },
+    };
 };
