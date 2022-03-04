@@ -1,11 +1,12 @@
 ---
 eleventyExcludeFromCollections: true
 layout: layouts/default-layout.njk
+title: Lists
 ---
 
 {% markdown %}
-# Articles
+# Lists
 {% endmarkdown %}
 
-{% set currentCollection = collections.post %}
+{% set currentCollection = collections.list %}
 {% include "tags-list.njk" %}
