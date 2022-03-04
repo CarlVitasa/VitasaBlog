@@ -39,6 +39,17 @@ html {
   }
 }
 
+code {
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  color: #f8f8f2;
+  background-color: var(--primary-color);
+  padding: 2px 6px;
+  border-radius: 0.3em;
+  width: 600px;
+  overflow-x: scroll;
+}
+
 .corner-wrapper {
   text-align: center;
   display: block;
@@ -81,17 +92,6 @@ h2, h3, h4, h5, h6 {
   line-height: 1.25;
 }
 
-code {
-  font-family: var(--secondary-font);
-  font-size: 16px;
-  color: #f8f8f2;
-  background-color: var(--primary-color);
-  padding: 2px 6px;
-  border-radius: 0.3em;
-  width: 600px;
-  overflow-x: scroll;
-}
-
 hr {
   border: 0;
   height: 0;
@@ -99,7 +99,6 @@ hr {
   border-top: 2px solid var(--primary-color);
   opacity: 0.2;
 }
-
 
 table {
   border-collapse: collapse;
@@ -128,7 +127,7 @@ tr:nth-child(odd) {
 
 a:link:not(.nav-link) {
   color: var(--accent-color);
-  border-bottom: 2px solid transparent;
+  border-bottom: 3px solid transparent;
   transition: border-bottom 0.35s;
   text-decoration: none;
 }
@@ -234,15 +233,6 @@ blockquote small:before {
   background: #c2c2c2;
 }
 
-time {
-  font-size: 0.8em;
-  font-family: var(--secondary-font);
-  color: var(--bg-color);
-  background: var(--primary-color);
-  border-radius: var(--radius);
-  padding: 2px 6px;
-}
-
 /* Profile image */
 
 .profile {
@@ -306,7 +296,7 @@ time {
 
 mark {
   margin: 0 -0.4em;
-  padding: 0.1em 0.4em;
+  padding: 0em 0.4em;
   border-radius: 0.8em 0.3em;
   background: transparent;
   background-image: linear-gradient(to right,
@@ -332,4 +322,24 @@ ul ul::before {
   left: -17px;
   top: -3px;
   bottom: -3px;
+}
+
+/* posts */
+
+.post {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  background-color: rgba(179, 179, 179, 0.1);
+  border-radius: var(--radius);
+  padding: 4px 8px;
+  margin-bottom: 10px;
+}
+
+time {
+  font-size: 16px;
+  font-family: var(--secondary-font);
+  color: var(--primary-color);
+  border-radius: var(--radius);
+  padding: 2px 6px;
 }

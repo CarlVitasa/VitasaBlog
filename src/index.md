@@ -6,8 +6,9 @@ title: About
 
 # About
 
-Hi there, I'm [Carl Vitasa](https://carlvitasa.com/) and welcome to my <mark>cozy corner</mark> in the interwebs. I have <mark>a lot of interests</mark> 
-
+Hi there, I'm <a href="https://carlvitasa.com/" target="_blank">Carl Vitasa</a>
+ and welcome to my <mark>cozy corner</mark> in the interwebs. I have <mark>a lot of interests</mark> 
+ 
 `example code`
 
 ```csharp   
@@ -16,6 +17,7 @@ int[] arr2 = { 3, 4, 5 };
 var arr3 = new int[] { 3, 4, 5 };
 var arr4 = new int[3];
 ```
+
 <div style="max-width: 640px; height: 360px;" class="corner-wrapper">
     <script src="https://unpkg.com/shader-doodle@alpha"></script>
     <shader-doodle shadertoy="shadertoy">
