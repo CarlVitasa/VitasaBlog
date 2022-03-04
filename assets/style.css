@@ -1,25 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 :root {
   --bg-color: #F6F7F8;
   --primary-color: #2E3440;
-  /* --secondary-color: #2E3440; */
-  --secondary-color: #77AD78;
+  --accent-color: #77AD78;
   --ternary-color: #ebebeb;
   --misc-color: #aaaaaa;
   --radius: 0.5em;
   --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0);
 
-  --header-font: 'Baloo 2', sans-serif;
-  --primary-font: Roboto, Arial, sans-serif;
-  --secondary-font: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  --primary-font: 'Noto Sans', Arial, sans-serif;
+  --accent-font: 'Baloo 2', sans-serif;
+  --secondary-font: 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
 html {
   margin: 1rem auto;
-  font-size: 18px;
   box-sizing: border-box;
   padding: 0 1rem 0 1rem;
   max-width: 900px;
@@ -28,13 +26,20 @@ html {
 }
 
 @media only screen and (max-width: 600px) {
-  html {
-    font-size: 16px;
+  body {
+    font-size: 16px !important;
+  }
+
+  code {
+    font-size: 14px !important;
+  }
+
+  ul ul::before {
+    left: -15px !important;
   }
 }
 
 .corner-wrapper {
-  /* pointer-events: none; */
   text-align: center;
   display: block;
   overflow: hidden;
@@ -50,15 +55,18 @@ shader-doodle {
 }
 
 body {
+  font-size: 18px;
   font-family: var(--primary-font);
-  font-size: 1rem;
   line-height: 1.5em;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 40rem;
+  width: 100%;
   background-color: var(--bg-color);
 }
 
+
 h1 {
-  font-family: var(--header-font);
+  font-family: var(--accent-font);
   font-size: 2.5em;
   color: var(--primary-color);
   text-align: center;
@@ -67,7 +75,7 @@ h1 {
 }
 
 h2, h3, h4, h5, h6 {
-  font-family: var(--header-font);
+  font-family: var(--accent-font);
   color: var(--primary-color);
   margin: 2.5rem 0 1.5rem 0;
   line-height: 1.25;
@@ -119,18 +127,19 @@ tr:nth-child(odd) {
 /* Links */
 
 a:link:not(.nav-link) {
+  color: var(--accent-color);
   border-bottom: 2px solid transparent;
   transition: border-bottom 0.35s;
   text-decoration: none;
 }
 
 a:visited {
-  color: var(--secondary-color);
+  color: var(--accent-color);
   text-decoration: none;
 }
 
 a:link:hover {
-  border-bottom-color: var(--secondary-color);
+  border-bottom-color: var(--accent-color);
 }
 
 /* Images ----------------------------------------------------------- */
@@ -148,7 +157,7 @@ img {
 blockquote {
   margin: 1.6em 0 1.6em 0;
   padding: 0 0 0 1.6em;
-  border-left: var(--secondary-color) 0.4em solid;
+  border-left: var(--accent-color) 0.4em solid;
   color: var(--primary-color);
 }
 
@@ -171,7 +180,7 @@ blockquote small:before {
 }
 
 .nav-link {
-  font-family: var(--header-font);
+  font-family: var(--accent-font);
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
@@ -181,7 +190,8 @@ blockquote small:before {
   display: inline-block;
   position: relative;
   opacity: 0.75;
-  background: linear-gradient(to bottom, var(--secondary-color) 0%, var(--secondary-color) 100%);
+  color: var(--accent-color);
+  background: linear-gradient(to bottom, var(--accent-color) 0%, var(--accent-color) 100%);
   background-position: 0 100%;
   background-repeat: repeat-x;
   background-size: 3px 3px;
@@ -199,7 +209,7 @@ blockquote small:before {
 /* Misc ----------------------------------------------------------- */
 ::selection {
   color: white;
-  background-color: var(--secondary-color);
+  background-color: var(--accent-color);
 }
 
 /* Custom Scroll Bar */
@@ -305,4 +315,21 @@ mark {
       rgba(255, 225, 0, 0.3));
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+}
+
+/* Lists */
+
+ul {
+  position: relative;
+  list-style-type: '●  ';
+}
+
+ul ul::before {
+  content: '';
+  border-left: 3px solid var(--primary-color);
+  opacity: 0.1;
+  position: absolute;
+  left: -17px;
+  top: -3px;
+  bottom: -3px;
 }

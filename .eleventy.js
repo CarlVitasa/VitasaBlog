@@ -5,7 +5,8 @@ moment.locale('en');
 const markdownIt = require("markdown-it");
 
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addPassthroughCopy('assets');
+    eleventyConfig.addPassthroughCopy('./assets');
+    eleventyConfig.addWatchTarget('./assets');
     eleventyConfig.addPlugin(syntaxHighlight);
 
     eleventyConfig.addFilter('dateIso', date => {

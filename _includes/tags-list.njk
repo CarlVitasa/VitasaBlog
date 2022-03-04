@@ -1,7 +1,3 @@
-{% markdown %}
-# Articles
-{% endmarkdown %}
-
 {% for post in currentCollection | reverse %}
   <article>
     <a href="{{ post.url | url }}">
