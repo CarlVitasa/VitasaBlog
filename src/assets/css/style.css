@@ -51,8 +51,6 @@ code {
 }
 
 .corner-wrapper {
-  text-align: center;
-  display: block;
   overflow: hidden;
   margin: 1em auto;
   border-radius: var(--radius);
@@ -64,6 +62,7 @@ shader-doodle {
   width: 100%;
   height: 100%;
 }
+
 
 body {
   font-size: 18px;
