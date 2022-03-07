@@ -4,16 +4,14 @@ layout: layouts/default-layout.njk
 title: About
 ---
 
-# About
-
 Hi there, I'm <a href="https://carlvitasa.com/" target="_blank">Carl Vitasa</a>
  and welcome to my <mark>cozy corner</mark> in the interwebs. Below is an example of sketch done using `p5.js`.
 
 <div id="sketch1" class="corner-wrapper"></div>
-<script src="./assets/p5-sketches/sketch_001.js"></script>
+<script src="/assets/p5-sketches/sketch_001.js"></script>
 
 <div id="sketch2" class="corner-wrapper"></div>
-<script src="./assets/p5-sketches/sketch_002.js"></script>
+<script src="/assets/p5-sketches/sketch_002.js"></script>
 
 
 ```js   

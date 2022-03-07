@@ -1,8 +1,11 @@
+<div class = "post-container">
 {% for post in currentCollection | reverse %}
-  <article>
+  <article >
     <a href="{{ post.url | url }}" class="post">
       {{ post.data.title }}
-      <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time>
     </a>
   </article>
 {% endfor %}
+</div>
+
+{# <time datetime="{{ post.date | dateIso }}">{{ post.date | dateReadable }}</time> #}
