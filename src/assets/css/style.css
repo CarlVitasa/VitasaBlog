@@ -56,6 +56,8 @@ code {
   border-radius: var(--radius);
   transform: translateZ(0px);
   box-shadow: var(--shadow);
+  max-width: 640px;
+  height: 360px;
 }
 
 shader-doodle {
@@ -63,6 +65,10 @@ shader-doodle {
   height: 100%;
 }
 
+iframe {
+  width: 100%;
+  height: 100%;
+}
 
 body {
   font-size: 18px;

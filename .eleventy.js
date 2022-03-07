@@ -6,9 +6,7 @@ const markdownIt = require("markdown-it");
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('./src/assets');
-
     eleventyConfig.addWatchTarget('./src/assets');
-
     eleventyConfig.addPlugin(syntaxHighlight);
 
     eleventyConfig.addFilter('dateIso', date => {
