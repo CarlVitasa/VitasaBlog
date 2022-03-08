@@ -1,7 +1,4 @@
 new p5((s) => {
-
-    let x = 100;
-    let y = 100;
     let size = 50;
 
     s.setup = () => {

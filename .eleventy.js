@@ -1,8 +1,13 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const moment = require('moment');
-
-moment.locale('en');
 const markdownIt = require("markdown-it");
+const moment = require('moment');
+const md = new markdownIt({ html: true });
+moment.locale('en');
+
+// extracting code from a file
+const { readFileSync } = require("fs");
+const SOURCE_DIR = "src/"
+const P5_SKETCHES_DIR = "assets/p5-sketches/";
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('./src/assets');
@@ -17,16 +22,22 @@ module.exports = function (eleventyConfig) {
         return moment(date).utc().format('YYYY MMM DD').toUpperCase(); // e.g. 2020 JUL 07
     });
 
-    eleventyConfig.addPairedShortcode("myShortcode", function (content) {
-        return content;
-    });
-
-    const md = new markdownIt({
-        html: true
-    });
-
     eleventyConfig.addPairedShortcode("markdown", (content) => {
         return md.render(content);
+    });
+
+    eleventyConfig.addShortcode("renderSketch", (sketchId, filename) => {
+        return `<div id=\"${sketchId}\" class=\"corner-wrapper\"></div>
+        <script src =\"${P5_SKETCHES_DIR + filename}\"></script>`;
+    });
+
+    eleventyConfig.addShortcode("getCode", (filename) => {
+        const code = readFileSync(SOURCE_DIR + P5_SKETCHES_DIR + filename).toString();
+        return "\n\`\`\`js\n" + code + "\n\`\`\`\n";
+    });
+
+    eleventyConfig.addShortcode("openNewTab", (text, link) => {
+        return `<a href=\"${link}\" target=\"_blank\">${text}</a>`;
     });
 
     return {

@@ -4,36 +4,24 @@ layout: layouts/default-layout.njk
 title: About
 ---
 
-Hi there, I'm <a href="https://carlvitasa.com/" target="_blank">Carl Vitasa</a>
- and welcome to my <mark>cozy corner</mark> in the interwebs. Below is an example of sketch done using `p5.js`.
+Hi there, I'm {% openNewTab "Carl Vitasa", "https://carlvitasa.com/" %} and welcome to my <mark>cozy corner</mark> in the interwebs. This website was built using {% openNewTab "11ty", "https://www.11ty.dev/" %} and features generative art utilizing {% openNewTab "p5.js", "https://p5js.org/" %}.
 
-<div id="sketch1" class="corner-wrapper"></div>
-<script src="/assets/p5-sketches/sketch_001.js"></script>
+{% renderSketch "sketch1", "sketch_001.js" %}
+{% getCode "sketch_001.js" %}
 
-<div id="sketch2" class="corner-wrapper"></div>
-<script src="/assets/p5-sketches/sketch_002.js"></script>
+{% renderSketch "sketch2", "sketch_002.js" %}
+{% getCode "sketch_002.js" %}
 
+{% raw %}
+```liquid
+{% renderSketch "sketch1", "sketch_001.js" %}
+{% getCode "sketch_001.js" %}
 
-```js   
-new p5((s) => {
-
-    let x = 100;
-    let y = 100;
-    let size = 50;
-
-    s.setup = () => {
-        s.frameRate(144);
-        s.createCanvas(640, 360).parent('sketch1');
-    };
-
-    s.draw = () => {
-        s.background(0);
-        s.fill(255);
-        s.noStroke();
-        s.circle(s.mouseX, s.mouseY, size);
-    };
-});
+{% renderSketch "sketch2", "sketch_002.js" %}
+{% getCode "sketch_002.js" %}
 ```
+{% endraw %}
+
 <!-- <div class="corner-wrapper">
     <iframe frameborder="0" src="https://www.shadertoy.com/embed/4sKBzD?gui=false&t=10&paused=false&muted=true"></iframe>
 </div> -->

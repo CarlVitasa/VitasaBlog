@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 :root {
@@ -23,6 +23,16 @@ html {
   max-width: 900px;
   overflow-y: scroll;
   -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-size: 18px;
+  font-family: var(--primary-font);
+  line-height: 1.7em;
+  margin: 0 auto;
+  max-width: 40rem;
+  width: 100%;
+  background-color: var(--bg-color);
 }
 
 @media only screen and (max-width: 600px) {
@@ -59,17 +69,6 @@ code {
   max-width: 640px;
   height: 360px;
 }
-
-body {
-  font-size: 18px;
-  font-family: var(--primary-font);
-  line-height: 1.5em;
-  margin: 0 auto;
-  max-width: 40rem;
-  width: 100%;
-  background-color: var(--bg-color);
-}
-
 
 h1 {
   font-family: var(--accent-font);
@@ -120,20 +119,66 @@ tr:nth-child(odd) {
 
 /* Links */
 
-a:link:not(.nav-link) {
+a:link:not(.nav-link):not(.post), a:visited {
+  color: var(--accent-color);
+  opacity: 1;
+  border-bottom: 2px solid;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:link:hover:not(.nav-link):not(.post) {
+  opacity: 0.75;
+  border-bottom: 3px solid;
+  border-bottom-color: var(--accent-color);
+}
+
+a.post:link:not(.nav-link) {
   color: var(--accent-color);
   border-bottom: 2px solid transparent;
   transition: border-bottom 0.35s;
   text-decoration: none;
 }
 
-a:visited {
+a.post:link:hover:not(.nav-link), post {
+  border-bottom-color: var(--accent-color);
+}
+
+/* Navbar ----------------------------------------------------------- */
+
+.navbar {
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.nav-link {
+  font-family: var(--accent-font);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: inline-block;
+  position: relative;
+  opacity: 1;
   color: var(--accent-color);
+  background: linear-gradient(to bottom, var(--accent-color) 0%, var(--accent-color) 100%);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 3px 3px;
   text-decoration: none;
 }
 
-a:link:hover {
-  border-bottom-color: var(--accent-color);
+.nav-link:hover {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23467BB5' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: 0 100%;
+  background-size: auto 6px;
+  background-repeat: repeat-x;
+  opacity: 0.75;
+  text-decoration: none;
 }
 
 /* Images ----------------------------------------------------------- */
@@ -164,40 +209,6 @@ blockquote small {
 
 blockquote small:before {
   content: "\2014 \00A0";
-}
-
-/* Navbar ----------------------------------------------------------- */
-
-.navbar {
-  font-size: 16px;
-  text-align: center;
-}
-
-.nav-link {
-  font-family: var(--accent-font);
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  margin-top: 40px;
-  margin-left: 20px;
-  margin-right: 20px;
-  display: inline-block;
-  position: relative;
-  opacity: 0.75;
-  color: var(--accent-color);
-  background: linear-gradient(to bottom, var(--accent-color) 0%, var(--accent-color) 100%);
-  background-position: 0 100%;
-  background-repeat: repeat-x;
-  background-size: 3px 3px;
-  text-decoration: none;
-}
-
-.nav-link:hover {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23467BB5' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
-  background-position: 0 100%;
-  background-size: auto 6px;
-  background-repeat: repeat-x;
-  text-decoration: none;
 }
 
 /* Misc ----------------------------------------------------------- */
