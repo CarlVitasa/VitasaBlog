@@ -61,11 +61,17 @@ code {
 }
 
 .corner-wrapper {
+  /* Centers p5.js sketches */
   display: flex;
   justify-content: center;
+
   overflow: hidden;
   margin: 1em auto;
   border-radius: var(--radius);
+
+  /* Needed for mobile */
+  transform: translateZ(0px);
+
   box-shadow: var(--shadow);
   max-width: 640px;
   height: 360px;
