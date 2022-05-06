@@ -28,7 +28,8 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addShortcode("renderSketch", (sketchId, filename) => {
         return `<div id=\"${sketchId}\" class=\"corner-wrapper\"></div>
-        <script src =\"${P5_SKETCHES_DIR + filename}\"></script>`;
+        <script src =\"${P5_SKETCHES_DIR + filename}\"></script>
+        <script>document.getElementById('${sketchId}').addEventListener('touchstart', function (event) { event.preventDefault() });</script>`;
     });
 
     eleventyConfig.addShortcode("getCode", (filename) => {

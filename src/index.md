@@ -22,6 +22,19 @@ Hi there, I'm {% openNewTab "Carl Vitasa", "https://carlvitasa.com/" %} and welc
 ```
 {% endraw %}
 
+{% raw %}
+~~~liquid
+```liquid
+{% renderSketch "sketch1", "sketch_001.js" %}
+{% getCode "sketch_001.js" %}
+
+{% renderSketch "sketch2", "sketch_002.js" %}
+{% getCode "sketch_002.js" %}
+```
+{% endraw %}
+~~~
+
 <!-- <div class="corner-wrapper">
     <iframe frameborder="0" src="https://www.shadertoy.com/embed/4sKBzD?gui=false&t=10&paused=false&muted=true"></iframe>
 </div> -->
+

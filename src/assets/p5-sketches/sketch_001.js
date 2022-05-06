@@ -2,7 +2,7 @@ new p5((s) => {
     const CANVAS_WIDTH = 640;
     const CANVAS_HEIGHT = 360;
     const MAX_TREE_HEIGHT = 175;
-    const MAX_TREE_ANGLE = 30;
+    const MAX_TREE_ANGLE = 25;
     const MAX_BRANCH_LENGTH = 10;
 
     s.setup = () => {
@@ -17,8 +17,7 @@ new p5((s) => {
 
         let mouseInputY = s.constrain(s.mouseY, 0, CANVAS_HEIGHT);
         let length = remap(mouseInputY, 0, CANVAS_HEIGHT, MAX_TREE_HEIGHT, 0);
-        let mouseInputX = s.constrain(s.mouseX, 0, CANVAS_WIDTH * 0.5);
-        let angle = remap(mouseInputX, 0, CANVAS_WIDTH * 0.5, 0, MAX_TREE_ANGLE);
+        let angle = remap(mouseInputY, 0, CANVAS_HEIGHT, MAX_TREE_ANGLE, 5);
 
         branch(length * 0.5, angle);
     };
@@ -44,3 +43,4 @@ new p5((s) => {
         return (((oldValue - oldMin) * newRange) / oldRange) + newMin;
     }
 });
+

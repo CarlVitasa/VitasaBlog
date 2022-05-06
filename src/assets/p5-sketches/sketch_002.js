@@ -11,7 +11,7 @@ new p5((s) => {
 
     s.draw = () => {
         s.background(0);
-        s.fill(50);
+        s.fill(255);
         s.noStroke();
         s.circle(s.mouseX, s.mouseY, size);
     };
