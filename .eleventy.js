@@ -6,8 +6,8 @@ moment.locale('en');
 
 // extracting code from a file
 const { readFileSync } = require("fs");
-const SOURCE_DIR = "src/"
-const P5_SKETCHES_DIR = "assets/p5-sketches/";
+const SOURCE_DIR = "src"
+const P5_SKETCHES_DIR = "/assets/p5-sketches/";
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('./src/assets');
@@ -39,6 +39,11 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addShortcode("openNewTab", (text, link) => {
         return `<a href=\"${link}\" target=\"_blank\">${text}</a>`;
+    });
+
+    eleventyConfig.addShortcode("youTubeEmbed", (link) => {
+        const embedCode = link.replace("watch?v=", "embed/");
+        return `<div class=\"video-container\"><iframe width=\"560\" height=\"315\" src=\"${embedCode}\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div>`;
     });
 
     return {

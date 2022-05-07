@@ -1,8 +1,8 @@
 ---
-title: How to Setup p5.js for Web
-date: 2022-03-07
+title: Fractal Tree
+date: 2022-05-06
 tags: 
-    - post
+    - sketch
 layout: layouts/default-layout.njk
 ---
 
@@ -11,3 +11,4 @@ layout: layouts/default-layout.njk
 
 <div id="sketch2" class="corner-wrapper"></div>
 <script src="/assets/p5-sketches/sketch_002.js"></script>
+

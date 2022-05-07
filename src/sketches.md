@@ -1,8 +1,8 @@
 ---
 eleventyExcludeFromCollections: true
 layout: layouts/default-layout.njk
-title: Articles
+title: Sketches
 ---
 
-{% set currentCollection = collections.article %}
+{% set currentCollection = collections.sketch %}
 {% include "tags-list.njk" %}
