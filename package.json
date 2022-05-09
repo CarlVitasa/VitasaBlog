@@ -19,11 +19,12 @@
   },
   "homepage": "https://github.com/CarlVitasa/TestBlog#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy": "^1.0.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.2.2",
     "moment": "^2.29.2"
   },
   "dependencies": {
+    "async": "^3.2.3",
     "engine.io": "^6.1.3",
     "socket.io": "^4.4.1"
   }
