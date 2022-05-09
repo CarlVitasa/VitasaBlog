@@ -6,9 +6,5 @@ tags:
 layout: layouts/default-layout.njk
 ---
 
-<div id="sketch1" class="corner-wrapper"></div>
-<script src="/assets/p5-sketches/sketch_001.js"></script>
-
-<div id="sketch2" class="corner-wrapper"></div>
-<script src="/assets/p5-sketches/sketch_002.js"></script>
-
+{% renderSketch "fractal-tree", "fractal-tree.js", true %}
+{% getCode "fractal-tree.js" %}

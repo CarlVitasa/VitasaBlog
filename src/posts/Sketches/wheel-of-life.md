@@ -7,4 +7,3 @@ layout: layouts/default-layout.njk
 ---
 
 {% renderSketch "wheel", "wheel-of-life.js", true %}
-{% getCode "wheel-of-life.js" %}
