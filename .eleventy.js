@@ -46,7 +46,7 @@ module.exports = function (eleventyConfig) {
         return `<a href=\"${link}\" target=\"_blank\">${text}</a>`;
     });
 
-    eleventyConfig.addShortcode("youTubeEmbed", (link) => {
+    eleventyConfig.addShortcode("youtube", (link) => {
         const embedCode = link.replace("watch?v=", "embed/");
         return `<div class=\"video-container\"><iframe width=\"560\" height=\"315\" src=\"${embedCode}\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div>`;
     });
