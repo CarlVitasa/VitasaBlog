@@ -113,3 +113,11 @@ Gotta keep it suave like I'm Sade in the 90s
 {% youtube "https://www.youtube.com/watch?v=nxg4C365LbQ" %}
 
 Daylight In bad dreams
+
+## Wolf Alice - Smile
+
+{% youtube "https://www.youtube.com/watch?v=NV39h7GHDYs" %}
+
+I wear my feelings on my sleeve, i suggested it\
+it serves me better than to swallow in a sedative
+

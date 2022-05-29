@@ -15,7 +15,7 @@ The first 10 minutes of the video game / game creation system on the PS4 titled 
 ## The Beauty of Bézier Curves
 {% youtube "https://www.youtube.com/watch?v=aVwxzDHniEw" %}
 
-A beautifully done 
+A beautiful visualization and explanation of how Bézier Curves work. 
 
 ---
 ## Harry House
