@@ -26,14 +26,14 @@ module.exports = function (eleventyConfig) {
         return md.render(content);
     });
 
-    eleventyConfig.addShortcode("renderSketch", (sketchId, filename, touch = false) => {
+    eleventyConfig.addShortcode("renderSketch", (sketchId, filename, interactable = false) => {
         let result = `<div id=\"${sketchId}\" class=\"corner-wrapper\"></div>
         <script src =\"${P5_SKETCHES_DIR + filename}\"></script>`
 
-        if (touch) {
-            return result;
-        } else {
+        if (interactable) {
             return result += `<script>document.getElementById('${sketchId}').addEventListener('touchstart', function (event) { event.preventDefault() });</script>`;
+        } else {
+            return result;
         }
     });
 

@@ -6,5 +6,5 @@ tags:
 layout: layouts/sketch-layout.njk
 ---
 
-{% renderSketch "sine-pulse", "sine-pulse.js", true %}
+{% renderSketch "sine-pulse", "sine-pulse.js" %}
 {% getCode "sine-pulse.js" %}

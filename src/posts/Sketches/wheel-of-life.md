@@ -6,4 +6,4 @@ tags:
 layout: layouts/sketch-layout.njk
 ---
 
-{% renderSketch "wheel", "wheel-of-life.js", true %}
+{% renderSketch "wheel", "wheel-of-life.js" %}
