@@ -3,7 +3,7 @@ title: Fractal Tree
 date: 2022-05-06
 tags: 
     - sketch
-layout: layouts/default-layout.njk
+layout: layouts/sketch-layout.njk
 ---
 
 {% renderSketch "fractal-tree", "fractal-tree.js", true %}
