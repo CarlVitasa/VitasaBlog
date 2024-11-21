@@ -6,6 +6,6 @@ tags:
 layout: layouts/default-layout.njk
 ---
 
-- [The Courage To Be Disliked](https://www.amazon.com/Courage-Be-Disliked-Phenomenon-Happiness/dp/1501197274)
+- [The Courage To Be Disliked](https://app.thestorygraph.com/books/bec50eb5-6428-4b08-ad58-f8e7a90f13e5)
 - Atomic Habits
 - The Pragmatic Programmer

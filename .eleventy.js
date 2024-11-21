@@ -10,6 +10,7 @@ const SOURCE_DIR = "src"
 const P5_SKETCHES_DIR = "/assets/p5-sketches/";
 
 module.exports = function (eleventyConfig) {
+    eleventyConfig.addPassthroughCopy({ "src/favicon.ico": "/favicon.ico" });
     eleventyConfig.addPassthroughCopy('./src/assets');
     eleventyConfig.addWatchTarget('./src/assets');
     eleventyConfig.addPlugin(syntaxHighlight);
@@ -46,9 +47,27 @@ module.exports = function (eleventyConfig) {
         return `<a href=\"${link}\" target=\"_blank\">${text}</a>`;
     });
 
+    // Function to extract video ID from YouTube URL
+    function extractVideoID(link) {
+        try {
+            const url = new URL(link);
+            if (url.hostname === 'youtu.be') {
+                return url.pathname.slice(1);
+            } else if (url.hostname.includes('youtube.com')) {
+                return url.searchParams.get('v');
+            }
+        } catch (e) {
+            console.error('Invalid YouTube URL:', link);
+        }
+        return null;
+    }
+
     eleventyConfig.addShortcode("youtube", (link) => {
-        const embedCode = link.replace("watch?v=", "embed/");
-        return `<div class="video-container"><iframe width="560" height="315" src="${embedCode}?autoplay=0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+        const videoId = extractVideoID(link);
+        if (!videoId) {
+            return `<p>Error: Invalid YouTube URL.</p>`;
+        }
+        return `<lite-youtube videoid="${videoId}"></lite-youtube>`;
     });
 
     return {
