@@ -11,6 +11,7 @@ layout: layouts/default-layout.njk
 
 A live theatrical exploration of self through the eyes of Magician Derek DelGaudio.
 
+---
 ## Bo Burnham Inside
 {% youtube "https://www.youtube.com/watch?v=k1BneeJTDcU" %}
 
@@ -27,6 +28,12 @@ A look into the life and career of Richard Turner (renowned as one of the world'
 {% youtube "https://www.youtube.com/watch?v=-Y7TlaXDPrg" %}
 
 An in depth look at the creation of Disney theme parks and the talented individuals involved in bringing ambitious concepts to reality.
+
+---
+## The Remarkable Life of Ibelin
+{% youtube "https://www.youtube.com/watch?v=lM_hkJ0Rl-c" %}
+
+A wholesome tale of a recently deceased young gamer and his tremendous impact towards his online friends.
 
 ---
 ## Earth At Night In Color

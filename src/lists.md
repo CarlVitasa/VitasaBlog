@@ -39,4 +39,7 @@ Looking for some content to consume? Here's an arbitrary lists of reccomendation
     <article>
     <a href="/posts/lists/tv-series/" class="post">TV Series</a>
   </article>
+  <article>
+    <a href="/posts/lists/web-series/" class="post">Web Series</a>
+  </article>
 </div>
